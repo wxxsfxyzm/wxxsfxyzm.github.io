@@ -1,0 +1,94 @@
+<html lang="en" style="font-size: 40px;"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>“迎冬奥 我来赛！”网络知识竞赛</title>
+    <link rel="stylesheet" href="https://bj22static.m.youth.cn/images/2020518base.css">
+    <link rel="stylesheet" href="https://bj22static.m.youth.cn/images/tips.css">
+    <link rel="stylesheet" href="https://bj22static.m.youth.cn/images/20211223index.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="header clearfix w">
+                <div class="logo left">
+                    <div class="tuanhui">
+                        <img src="https://bj22static.m.youth.cn/images/tuanhui_qb_logo.png" alt="" class="tuanhui_logo">
+                    </div>
+                </div>
+                <div class="help right">
+                    <span onclick="ActivityRules()">活动规则</span>
+                    <span onclick="IntegralRule()">积分规则</span>
+                </div>
+            </div>
+            <div class="title">
+                <img src="https://bj22static.m.youth.cn/images/title.png" alt="">
+            </div>
+            <p class="peopleNumber">已有<span id="total">3156923</span>人参与答题</p>
+            <div class="user">
+                <div class="user_avatar">
+                    <img src="http://api.btstu.cn/sjtx/api.php?lx=c1&format=images" alt="" class="avatar">
+                </div>
+                <div class="user_info">
+                    <p class="user_name"><span class="name" id="name">你的名字</span><span class="write_info" onclick="wirteInfo()"></span></p>
+                    <p class="user_integral">积分：<span class="integral" id="score">xx</span>分</p>
+                </div>
+                <div class="index_btn_group">
+                    <span class="sign" onclick="sign()"></span>
+                    <span class="record" onclick="record()"></span>
+                </div>
+            </div>
+
+            <div class="answer_btn_group">
+                <span class="start_answer">
+                </span>
+                <span class="ranking_list" onclick="rankingList()"></span>
+            </div>
+
+            <div class="producer">
+                <h4>主办单位</h4>
+                <p>共青团中央青年发展部</p>
+                <p>国家体育总局群众体育司</p>
+                <p>中国青年报社</p>
+                <h4 class="undertaker">承办单位</h4>
+                <p>中国青年网</p>
+                <h4>协办单位</h4>
+                <p>中国青少年发展基金会</p>
+                <!-- <h5>特别鸣谢</h5>
+                <p><img src="https://bj22static.m.youth.cn/images/alibaba_tebiemingxie.png" alt="" class="alibaba_tebiemingxie"></p > -->
+                <p>鸣谢：<img src="https://bj22static.m.youth.cn/images/anta.png" alt="" class="anta"><img src="https://bj22static.m.youth.cn/images/tianmao.png" alt="" class="tianmao"><img src="https://bj22static.m.youth.cn/images/kedaxunfei.png" alt="" class="kedaxunfei"></p>
+            </div>
+        </div>
+    </div>
+    <a href="/winter/prize.html">
+        <div class="redEnvelopes">
+            <div class="red_inner">
+                 <img src="https://bj22static.m.youth.cn/images/red_border.png" alt="" class="red_border">
+                 <img src="https://bj22static.m.youth.cn/images/red_box.png" alt="" class="red_box">
+                 <img src="https://bj22static.m.youth.cn/images/red_zz.png" alt="" class="red_zz">
+            </div>
+         </div>
+    </a>
+    <div id="hidetext"></div>
+
+
+<script src="https://bj22static.m.youth.cn/images/jquery.min.js"></script>
+<script src="https://bj22static.m.youth.cn/images/tips.js"></script>
+<script type="text/javascript">
+    function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+$("#total").text(getQueryVariable("total"));
+$("#name").text(getQueryVariable("name"));
+$("#score").text(getQueryVariable("score"));
+</script>
+</body></html>
